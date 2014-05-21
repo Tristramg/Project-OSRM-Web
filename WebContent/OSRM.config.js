@@ -84,6 +84,11 @@ OSRM.DEFAULTS = {
 	],
 		
 	TILE_SERVERS: [
+        {	display_name: 'OpenStreetMap France',
+            url: 'http://{s}.tile.openstreetmap.fr/osmfr/{z/{x}/{y}.png',
+			attribution:'Data © <a href="http://www.openstreetmap.org/copyright/en">OpenStreetMap</a> contributors (ODbL)',
+			options:{maxZoom: 18}
+        },
 		{	display_name: 'Mapbox Terrain',
 			url:'http://{s}.tiles.mapbox.com/v3/dennisl.map-dfbkqsr2/{z}/{x}/{y}.png',
 			attribution:'Data © <a href="http://www.openstreetmap.org/copyright/en">OpenStreetMap</a> contributors (ODbL), Imagery © <a href="http://mapbox.com/">MapBox</a>',
