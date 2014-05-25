@@ -85,7 +85,7 @@ OSRM.DEFAULTS = {
 		
 	TILE_SERVERS: [
         {	display_name: 'OpenStreetMap France',
-            url: 'http://{s}.tile.openstreetmap.fr/osmfr/{z/{x}/{y}.png',
+            url: 'http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',
 			attribution:'Data © <a href="http://www.openstreetmap.org/copyright/en">OpenStreetMap</a> contributors (ODbL)',
 			options:{maxZoom: 18}
         },
