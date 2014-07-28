@@ -181,12 +181,12 @@ html, body
 #main-input
 {
 	width:390px;
-	height:140px;
+	height:240px;
 }
 #main-output
 {
 	width:390px;
-	top:160px;			/* main-input.height+2*gui-box.margin+2*gui-box.padding */
+	top:260px;			/* main-input.height+2*gui-box.margin+2*gui-box.padding */
 	bottom:0px;
 }
 
@@ -841,7 +841,7 @@ html, body
 .center
 {
 	display:table-cell;
-	text-align:center;
+	text-align:left;
 	vertical-align:middle;
 }
 .stretch

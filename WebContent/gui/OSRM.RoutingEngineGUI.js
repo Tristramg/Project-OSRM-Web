@@ -27,7 +27,31 @@ init: function() {
 	var options = OSRM.GUI.getRoutingEngines();
 
 	// generate selectors
-	OSRM.GUI.selectorInit("gui-engine-toggle", options, OSRM.DEFAULTS.ROUTING_ENGINE, OSRM.GUI._onRoutingEngineChanged);		
+	//OSRM.GUI.selectorInit("gui-engine-toggle", options, OSRM.DEFAULTS.ROUTING_ENGINE, OSRM.GUI._onRoutingEngineChanged);		
+    $('#stairs').on('change', OSRM.GUI._getRoutingEngine)
+    $('#escalator').on('change', OSRM.GUI._getRoutingEngine)
+    $('#ufr').on('change', OSRM.GUI._getRoutingEngine)
+    $('#elevator').on('change', OSRM.GUI._getRoutingEngine)
+},
+
+_getRoutingEngine: function() {
+    var engine = 0;
+    if ($('#stairs').prop('checked')) {
+        engine += 1;
+    }
+    if ($('#escalator').prop('checked')) {
+        engine += 2;
+    }
+    if ($('#ufr').prop('checked')) {
+        engine += 4;
+    }
+    if ($('#elevator').prop('checked')) {
+        engine += 8;
+    }
+
+    OSRM.GUI.setRoutingEngine(engine);
+	if( OSRM.G.markers.route.length > 1 )
+		OSRM.Routing.getRoute();
 },
 
 // change active routing engine
@@ -35,7 +59,7 @@ setRoutingEngine: function(engine) {
 	if( engine == OSRM.G.active_routing_engine )
 		return;
 	
-	OSRM.GUI.selectorChange( 'gui-engine-toggle', engine );
+//	OSRM.GUI.selectorChange( 'gui-engine-toggle', engine );
 	
 	OSRM.G.active_routing_engine = engine;
 	OSRM.G.active_routing_metric = OSRM.DEFAULTS.ROUTING_ENGINES[ OSRM.G.active_routing_engine ].metric;;
@@ -62,7 +86,7 @@ setRoutingEnginesLanguage: function() {
 	var options = OSRM.GUI.getRoutingEngines();
 	
 	// change dropdown menu names
-	OSRM.GUI.selectorRenameOptions( "gui-engine-toggle", options );
+//	OSRM.GUI.selectorRenameOptions( "gui-engine-toggle", options );
 },
 
 // gather routing engines

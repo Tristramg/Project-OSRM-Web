@@ -322,6 +322,15 @@ OSRM.parseParameters = function(){
 			var active_routing_engine = Number(name_val[1]);
 			if( active_routing_engine<0 || active_routing_engine>=OSRM.DEFAULTS.ROUTING_ENGINES.length)
 				return;
+            if( active_routing_engine & 1)
+                $('#stairs').prop('checked', true)
+            if( active_routing_engine & 2)
+                $('#escalator').prop('checked', true)
+            if( active_routing_engine & 4)
+                $('#ufr').prop('checked', true)
+            if( active_routing_engine & 8)
+                $('#elevator').prop('checked', true)
+
 			params.active_routing_engine = active_routing_engine;
 		}
 		else if(name_val[0] == 'ly') {
