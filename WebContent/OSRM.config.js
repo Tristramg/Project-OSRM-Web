@@ -82,9 +82,9 @@ OSRM.DEFAULTS = {
 	JOSM_MIN_ZOOM_LEVEL: 16,	
 	NOTES_MIN_ZOOM_LEVEL: 8,
 	
-    ONLOAD_ZOOM_LEVEL: 17,
-	ONLOAD_LATITUDE: 48.79472,
-	ONLOAD_LONGITUDE: 2.13656,
+    ONLOAD_ZOOM_LEVEL: 20,
+	ONLOAD_LATITUDE: 48.7954,
+	ONLOAD_LONGITUDE: 2.13584,
 	ONLOAD_SOURCE: "",
 	ONLOAD_TARGET: "",
 	
@@ -123,7 +123,7 @@ OSRM.DEFAULTS = {
         {	display_name: 'OpenStreetMap France',
             url: 'http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',
 			attribution:'Data © <a href="http://www.openstreetmap.org/copyright/en">OpenStreetMap</a> contributors (ODbL)',
-			options:{maxZoom: 18}
+			options:{maxZoom: 20}
         },
 		{	display_name: 'Mapbox Terrain',
 			url:'http://{s}.tiles.mapbox.com/v3/dennisl.map-dfbkqsr2/{z}/{x}/{y}.png',
